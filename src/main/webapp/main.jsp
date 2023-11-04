@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입</title>
+<title>JSP 게시판</title>
 <meta name="viewport" content="width-device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
@@ -33,6 +33,7 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="main.jsp">메인</a></li>
 				<li><a href="bbs.jsp">게시판</a></li>
+				<li><a href="./fullcalendar/calendar.jsp">캘린더</a></li>
 			</ul>
 			<%
 				if(userID == null) {
@@ -73,7 +74,7 @@
 			<div class="container">
 				<h1>웹사이트 소개</h1>
 				<p>이 사이트는 test용도로 작성되었습니다.</p>
-				<p><a class="btn btn-primary btn-pull" href="#" role="button">자세히 알아보기</a></p>
+				<p><a class="btn btn-primary btn-pull" href="#" role="button" onclick="return alert('준비중입니다.')">자세히 알아보기</a></p>
 			</div>
 		</div>
 	</div>
