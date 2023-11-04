@@ -7,8 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>JSP 게시판</title>
-<script
-	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/custom.css">
 <style type="text/css">
 html, body {
 	margin: 0;
@@ -24,7 +25,28 @@ html, body {
 </style>
 </head>
 <body>
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../main.jsp">JSP 게시판 웹사이트</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="../main.jsp">메인</a></li>
+				<li><a href="../bbs.jsp">게시판</a></li>
+				<li class="active"><a href="../fullcalendar/calendar.jsp">캘린더</a></li>
+				<li><a href="../chart/chart.jsp">차트</a></li>
+			</ul>
+		</div>
+	</nav>
 
+	<h1>캘린더 테스트</h1>
 	<div id='calendar'></div>
 	
 	<button type="button" onclick="test();">테스트</button>
@@ -109,5 +131,7 @@ html, body {
 			console.log(calendar.getEvents()[3].title)
 		}
 	</script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 </body>
 </html>

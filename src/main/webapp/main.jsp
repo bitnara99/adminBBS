@@ -34,6 +34,7 @@
 				<li class="active"><a href="main.jsp">메인</a></li>
 				<li><a href="bbs.jsp">게시판</a></li>
 				<li><a href="./fullcalendar/calendar.jsp">캘린더</a></li>
+				<li><a href="./chart/chart.jsp">차트</a></li>
 			</ul>
 			<%
 				if(userID == null) {

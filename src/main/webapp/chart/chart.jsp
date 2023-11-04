@@ -5,11 +5,33 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/custom.css">
 </head>
 <body>
-	hello world
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../main.jsp">JSP 게시판 웹사이트</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="../main.jsp">메인</a></li>
+				<li><a href="../bbs.jsp">게시판</a></li>
+				<li><a href="../fullcalendar/calendar.jsp">캘린더</a></li>
+				<li class="active"><a href="../chart/chart.jsp">차트</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<h1>chart 테스트</h1>
 	<div class="graphBox">
 		<canvas id="barCanvas" width="384" height="210"></canvas>
 	</div>
@@ -72,5 +94,7 @@
 		barChart();
 		lineChart();
 	</script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 </body>
 </html>
