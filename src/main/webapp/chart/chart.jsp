@@ -31,18 +31,22 @@
 		</div>
 	</nav>
 	
-	<h1>chart 테스트</h1>
-	<div class="graphBox">
-		<canvas id="barCanvas" width="384" height="210"></canvas>
+	<div class="container">
+		<h1>chart 테스트</h1>
+		<div class="graphBox">
+			<canvas id="barCanvas" width="384" height="210"></canvas>
+		</div>
+		
+		<div class="graphBox">
+			<canvas id="lineCanvas" width="384" height="210"></canvas>
+		</div>
 	</div>
 	
-	<div class="graphBox">
-		<canvas id="lineCanvas" width="384" height="210"></canvas>
-	</div>
-	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 	<script type="text/javascript">
-		function barChart() {
-			var data = {
+		const barChart = () => {
+			const data = {
 				labels : [ "09시", "10시", "11시", "12시", "13시", "14시", "15시",
 						"16시", "17시", "18시", "19시", "20시", "21시", "22시" ],
 				datasets : [ {
@@ -55,13 +59,13 @@
 							70, 120 ]
 				} ]
 			};
-			var ctx = document.getElementById("barCanvas").getContext("2d");
-			var options = {};
-			var barChart = new Chart(ctx).Bar(data, options);
+			const ctx = document.getElementById("barCanvas").getContext("2d");
+			const options = {};
+			const barChart = new Chart(ctx).Bar(data, options);
 		}
 		
-		function lineChart() {
-			var data = {
+		const lineChart = () => {
+			const data = {
 				labels : [ "월", "화", "수", "목", "금", "토", "일" ],
 				datasets : [
 					{
@@ -83,18 +87,28 @@
 						pointHighlightFill : "#fff",
 						pointHighlightStroke : "rgba(151,187,205,1)",
 						data : [ 0, 1, 1, 2, 3, 5, 8 ]
+					},
+					{
+						label : "",
+						fillColor : "rgba(15,97,205,0.2)",
+						strokeColor : "rgba(15,97,205,1)",
+						pointColor : "rgba(15,97,205,1)",
+						pointStrokeColor : "#fff",
+						pointHighlightFill : "#fff",
+						pointHighlightStroke : "rgba(151,187,205,1)",
+						data : [ 9, 3, 6, 5, 3, 8, 20 ]
 					}
 				]
 			};
-			var ctx = document.getElementById("lineCanvas").getContext("2d");
-			var options = {};
-			var lineChart = new Chart(ctx).Line(data, options);
+			const ctx = document.getElementById("lineCanvas").getContext("2d");
+			const options = {};
+			const lineChart = new Chart(ctx).Line(data, options);
 		}
 		
+	$(document).ready(() => {
 		barChart();
 		lineChart();
+	})
 	</script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
 </body>
 </html>

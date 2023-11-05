@@ -118,7 +118,7 @@
 <!-- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <!-- 	<script src="js/bootstrap.js"></script> -->
 <script type="text/javascript">
-	$(document).ready(function() {
+	$(document).ready(() => {
 		$('#summernote').summernote({
 			minHeight: null,             // 최소 높이
 			maxHeight: null,             // 최대 높이

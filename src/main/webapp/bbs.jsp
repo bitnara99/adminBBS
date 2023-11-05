@@ -122,12 +122,22 @@
 			<%
 				}
 			%>
-<!-- 			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a> -->
-			<a href="./webEditor/write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+<!-- 			<a href="./webEditor/write.jsp" class="btn btn-primary pull-right" onclick="goWrite()">글쓰기</a> -->
+			<button class="btn btn-primary pull-right" onclick="goWrite()">글쓰기</button>
 		</div>
 	
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+	const goWrite = () => {
+		<% if(userID == null) { %>
+			alert('로그인이 필요합니다.');
+			location.href = 'login.jsp';
+		<% } else { %>
+			location.href = "./webEditor/write.jsp";
+		<% } %>
+	}
+	</script>
 </body>
 </html>

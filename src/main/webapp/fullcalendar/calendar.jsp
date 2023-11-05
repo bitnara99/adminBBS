@@ -46,14 +46,19 @@ html, body {
 		</div>
 	</nav>
 
-	<h1>캘린더 테스트</h1>
-	<div id='calendar'></div>
-	
-	<button type="button" onclick="test();">테스트</button>
-	<button type="button" onclick="showAllEvents();">모든 이벤트보기</button>
+	<div class="container">
+		<h1>캘린더 테스트</h1>
+		<div id='calendar'></div>
+		<div style="padding-bottom: 20px;">
+			<button type="button" class="btn btn-primary" onclick="test();">테스트</button>
+			<button type="button" class="btn btn-primary" onclick="showAllEvents();">모든 이벤트보기</button>
+		</div>
+	</div>
 
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 	<script>
-	var calendar;
+		var calendar;
 		document.addEventListener('DOMContentLoaded', function() {
 			var calendarEl = document.getElementById('calendar');
 
@@ -131,7 +136,6 @@ html, body {
 			console.log(calendar.getEvents()[3].title)
 		}
 	</script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
+
 </body>
 </html>
