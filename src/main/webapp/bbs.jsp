@@ -122,7 +122,8 @@
 			<%
 				}
 			%>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+<!-- 			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a> -->
+			<a href="./webEditor/write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 		</div>
 	
 	</div>
